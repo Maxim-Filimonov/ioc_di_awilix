@@ -1,6 +1,6 @@
 const { createContainer, asValue, asFunction } = require("awilix");
 const axios = require("axios");
-const { makeHttpRequest } = require("./make_http_request_ioc");
+const { makeHttpRequest } = require("./step_2/make_http_request_ioc");
 
 const container = createContainer();
 container.register("req", asValue(axios.default));

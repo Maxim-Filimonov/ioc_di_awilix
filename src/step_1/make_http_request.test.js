@@ -2,7 +2,7 @@ const { makeHttpRequest } = require("./make_http_request");
 
 jest.mock("axios");
 const FAKE_VERSION = "FAKE_VERSION";
-jest.mock("./version", () => FAKE_VERSION);
+jest.mock("../version", () => FAKE_VERSION);
 const axios = require("axios");
 
 describe("makeHttpRequest", () => {

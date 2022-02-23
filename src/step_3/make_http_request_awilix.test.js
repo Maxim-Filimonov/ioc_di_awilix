@@ -1,12 +1,11 @@
-const init = require("./init");
-const container = require("./init");
+const container = require("../init");
 const { asValue } = require("awilix");
 
 const req = { post: jest.fn() };
 
 container.register("req", asValue(req));
 
-const makeRequest = (data) => init.resolve("httpRequest")(data);
+const makeRequest = (data) => container.resolve("httpRequest")(data);
 describe("makeHttpRequest", () => {
   it("adds default timezone", () => {
     const data = { hello: "world" };
